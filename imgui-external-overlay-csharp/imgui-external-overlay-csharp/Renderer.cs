@@ -10,7 +10,7 @@ namespace imgui_render
         [DllImport("user32.dll")] static extern short GetAsyncKeyState(int vKey);
 
         bool Show = true;
-        Vector2 WindowSize = new Vector2(300, 400);
+        Vector2 WindowSize = new Vector2(400, 200);
 
         protected override void Render()
         {
