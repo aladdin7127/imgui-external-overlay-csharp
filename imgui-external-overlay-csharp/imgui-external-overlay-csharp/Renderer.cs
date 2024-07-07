@@ -12,6 +12,14 @@ namespace imgui_render
         bool Show = true;
         Vector2 WindowSize = new Vector2(400, 200);
 
+        public Renderer() : base(" ", 1920, 1080) { }
+
+        protected override Task PostInitialized()
+        {
+            this.VSync = false;
+            return Task.CompletedTask;
+        }
+
         protected override void Render()
         {
             if ((GetAsyncKeyState(0x2D) & 1) > 0)
